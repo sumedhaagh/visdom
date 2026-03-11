@@ -167,17 +167,15 @@ Using the view dropdown it is possible to select previously saved views, restori
 
 
 ## Setup
+
+> Note: For Python 3.12+, ensure pip and setuptools are updated. 
+> The deprecated `pkg_resources` issue is fixed in PR #966.
+
 Python and web clients come bundled with the python server.
 
 Install from pip
 ```bash
 > pip install visdom
-```
-
-Install from source
-```bash
-> pip install git+https://github.com/fossasia/visdom
-```
 
 ## Usage
 
