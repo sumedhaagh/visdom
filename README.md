@@ -164,6 +164,8 @@ Using the view dropdown it is possible to select previously saved views, restori
 
 
 
+> Make sure `pip` corresponds to the same Python environment where you will run Visdom.
+
 ## Quick Start
 
 Follow these steps to quickly run Visdom locally.
@@ -177,7 +179,7 @@ pip install visdom
 2. Start the Visdom server:
 
 ```bash
-visdom
+visdom -port 8097 -host 0.0.0.0
 ```
 
 3. Open the dashboard in your browser:
