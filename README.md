@@ -164,6 +164,40 @@ Using the view dropdown it is possible to select previously saved views, restori
 
 
 
+## Quick Start
+
+Follow these steps to quickly run Visdom locally.
+
+1. Install Visdom:
+
+```bash
+pip install visdom
+```
+
+2. Start the Visdom server:
+
+```bash
+visdom
+```
+
+3. Open the dashboard in your browser:
+
+```
+http://localhost:8097
+```
+
+4. Example Python code:
+
+```python
+import visdom
+import numpy as np
+
+viz = visdom.Visdom()
+
+viz.text("Hello Visdom!")
+viz.scatter(X=np.random.rand(100, 2))
+```
+
 
 
 ## Setup
