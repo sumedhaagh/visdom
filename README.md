@@ -200,7 +200,15 @@ viz.text("Hello Visdom!")
 viz.scatter(X=np.random.rand(100, 2))
 ```
 
+## Troubleshooting
 
+- If `visdom` command is not recognized, try running:
+  python -m visdom.server
+
+- Make sure the correct Python environment is activated.
+
+- If port 8097 is busy, run:
+  visdom -port 8098
 
 ## Setup
 Python and web clients come bundled with the python server.
