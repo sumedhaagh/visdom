@@ -2304,7 +2304,7 @@ class Visdom(object):
             assert values.ndim == 1, "values should be one-dimensional"
             assert len(parents.tolist()) == len(
                 values.tolist()
-            ), "length of values should be equal to lenght of labels and parents"
+            ), "length of values should be equal to length of labels and parents"
 
             data_dict[0]["values"] = values.tolist()
 
