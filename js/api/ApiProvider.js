@@ -36,7 +36,7 @@ const ApiProvider = ({ children }) => {
   // Send a low-level message to the server
   const sendSocketMessage = (data) => {
     if (!_socket.current) {
-      // TODO: error? warn?
+      console.warn("Socket connection is not initialized.");
       return;
     }
 
