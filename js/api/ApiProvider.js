@@ -36,9 +36,12 @@ const ApiProvider = ({ children }) => {
   // Send a low-level message to the server
   const sendSocketMessage = (data) => {
     if (!_socket.current) {
-      // TODO: error? warn?
+      console.warn("Socket connection is not initialized.", {
+        attemptedData: data,
+        socketState: _socket.current,
+      });
       return;
-    }
+    } 
 
     let msg = JSON.stringify(data);
     return _socket.current.send(msg);
