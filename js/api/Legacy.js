@@ -76,10 +76,8 @@ class Poller {
           } else {
             let messages = result.messages;
             messages.forEach((msg) => {
-              // Must re-encode message as handle message expects json
-              // in this particular format from sockets
-              // TODO Could refactor message parsing out elsewhere.
-              this.onmessage({ data: msg });
+                // Re-encode message as handleMessage expects JSON format from sockets
+                this.onmessage({ data: msg });
             });
           }
         },
