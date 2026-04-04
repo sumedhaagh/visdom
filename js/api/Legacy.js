@@ -76,13 +76,8 @@ class Poller {
           } else {
             let messages = result.messages;
             messages.forEach((msg) => {
-<<<<<<< Updated upstream
-                // Forward message; msg is already in the JSON format expected by handleMessage
-                this.onmessage({ data: msg });
-=======
               // Forward message; msg is already in the JSON format expected by handleMessage
               this.onmessage({ data: msg });
->>>>>>> Stashed changes
             });
           }
         },
