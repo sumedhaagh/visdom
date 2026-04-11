@@ -76,7 +76,9 @@ class Poller {
           } else {
             let messages = result.messages;
             messages.forEach((msg) => {
-              // Forward message; msg is already in the JSON format expected by handleMessage
+              // Forward message; msg is already a stringified JSON payload
+              // (as returned by socket_wrap.get_messages()), so pass it
+              // as evt.data for handleMessage to JSON.parse().
               this.onmessage({ data: msg });
             });
           }
