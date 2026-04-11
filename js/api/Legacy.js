@@ -76,7 +76,7 @@ class Poller {
           } else {
             let messages = result.messages;
             messages.forEach((msg) => {
-              // Forward message; msg is already in the JSON format expected by handleMessage
+              // Forward message; msg is already a JSON-encoded string for the evt.data value expected by handleMessage
               this.onmessage({ data: msg });
             });
           }
